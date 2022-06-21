@@ -16,7 +16,7 @@ services:
     depends_on:
       - php
     container_name: ds-nginx-1.22
-    image: dalso/ds-nginx-1.22:nginx
+    image: dalso/ds-nginx-1.22:latest
     restart: always
     ports:
       - 80:80
