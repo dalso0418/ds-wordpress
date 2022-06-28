@@ -3,7 +3,7 @@ version: '3.1'
 services:
   php:
     container_name: ds-php7.4-fpm
-    image: ds-php7.4-fpm
+    image: dalso/ds-php7.4-fpm
     restart: always
     ports:
       - 9000:9000
@@ -55,3 +55,7 @@ services:
       - ./data:/srv
     ports:
       - 8080:80
+
+networks:
+  ds-wordpress:
+    driver: bridge
