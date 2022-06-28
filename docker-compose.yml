@@ -5,8 +5,6 @@ services:
     container_name: ds-php7.4-fpm
     image: dalso/ds-php7.4-fpm
     restart: always
-    ports:
-      - 9000:9000
     volumes:
       - ./data/web:/var/www/html
       - ./config/php/php.ini:/usr/local/etc/php/php.ini
@@ -56,6 +54,3 @@ services:
     ports:
       - 8080:80
 
-networks:
-  ds-wordpress:
-    driver: bridge
