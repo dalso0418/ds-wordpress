@@ -51,6 +51,7 @@ ffmpeg 및 기타 확장과 함께 빌드되었습니다.
 - DB설정값 ./data/config/db/my.cnf </strong><br>
 Mariadb 최신버전<br>
 <br>
+
 ### Redis
 Cache를 위한 Redis - W3 Total과 같은 Cache 플러그인과 사용가능.
 
