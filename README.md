@@ -7,6 +7,7 @@ NPM 뒤 리버스프록시로 사용하기 적합합니다.<br>
 git clone https://github.com/dalso0418/ds-wordpress.git<br>
 cd ds-wordpress<br>
 vi .env  // DB root 계정 및 사용자 계정 수정<br>
+
 ![image](https://user-images.githubusercontent.com/107911055/180361146-685e34ba-a8e6-459c-a83a-ed89e43fa324.png)
 
 
