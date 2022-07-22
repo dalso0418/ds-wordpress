@@ -9,8 +9,6 @@ vi .env  // DB root 계정 및 사용자 계정 수정<br>
 chown -R 82:82 ./data/wordpress  // PHP 실행계정인 www-data의 UID/PID로 변경<br>
 docker-compose up -d <br>
 
-Nginx 1.22 - https://github.com/woosungchoi/docker-nginx-brotli 로 NPM(Nginx Proxy Manager)로 사용하게끔 직접 빌드하였습니다.
-
 ## 특징
 ### Nginx 1.22
 nginx 설정값 - ./config/nginx/nginx.conf<br>
@@ -28,6 +26,8 @@ nginx log ./data/log/nginx<br>
 *JIT 컴파일 이 활성화된 최신 PCRE<br>
 *최신 zlib<br>
 *알파인 리눅스(총 10MB 압축)<br>
+
+Nginx 1.22 - https://github.com/woosungchoi/docker-nginx-brotli 로 NPM(Nginx Proxy Manager)로 사용하게끔 직접 빌드하였습니다.
 <br>
 ### PHP7.4-fpm 
 PHP 설정값 - ./config/php/php.ini<br>
