@@ -6,10 +6,9 @@ NPM 뒤 리버스프록시로 사용하기 적합합니다.<br>
 <strong>
 git clone https://github.com/dalso0418/ds-wordpress.git<br>
 cd ds-wordpress<br>
-vi .env  // DB root 계정 및 사용자 계정 수정<br>
+vi docker-compose.yml  // DB root 계정 및 사용자 계정 수정<br>
 
-![image](https://user-images.githubusercontent.com/107911055/180361146-685e34ba-a8e6-459c-a83a-ed89e43fa324.png)
-
+![image](https://user-images.githubusercontent.com/107911055/180369543-c2e586bb-6b2e-4860-a4c1-15ea74e2f62c.png)
 
 chown -R 82:82 ./data/wordpress  // PHP 실행계정인 www-data의 UID/PID로 변경<br>
 docker-compose up -d <br>
