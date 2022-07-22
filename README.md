@@ -9,10 +9,8 @@ vi .env  // DB root 계정 및 사용자 계정 수정<br>
 chown -R 82:82 ./data/wordpress  // PHP 실행계정인 www-data의 UID/PID로 변경<br>
 docker-compose up -d <br>
 
-<br><br>
-
 Nginx 1.22 - https://github.com/woosungchoi/docker-nginx-brotli 로 NPM(Nginx Proxy Manager)로 사용하게끔 직접 빌드하였습니다.
-<br>
+
 ##특징
 ###Nginx 1.22
 nginx 설정값 - ./config/nginx/nginx.conf<br>
