@@ -15,6 +15,9 @@ chown -R 82:82 ./data/wordpress  // PHP 실행계정인 www-data의 UID/PID로 �
 docker-compose up -d <br>
 </strong><br>
 
+![image](https://user-images.githubusercontent.com/107911055/180361576-4af39ee2-941a-4722-951e-b03242696149.png)
+
+
 ## 특징
 ### Nginx 1.22
 
