@@ -28,7 +28,7 @@ services:
       - ./data/log/nginx:/var/log/nginx
   db:
     container_name: ds-mariadb
-    image: mariadb
+    image: mariadb:10.9
     restart: always
     ports:
       - 3306:3306
