@@ -2,8 +2,8 @@ version: '3.1'
 
 services:
   php:
-    container_name: ds-php8.2-fpm
-    image: dalso/ds-php8.2-fpm:latest
+    container_name: ds-php8.3-fpm
+    image: dalso/ds-php8.3-fpm:arm
     restart: always
     environment:
       - TZ=Asia/Seoul
@@ -14,8 +14,8 @@ services:
   web:
     depends_on:
       - php
-    container_name: ds-nginx-1.22
-    image: dalso/ds-nginx-1.22:latest
+    container_name: ds-nginx
+    image: nginx:1.25.2-alpine
     restart: always
     environment:
       - TZ=Asia/Seoul
@@ -28,7 +28,7 @@ services:
       - ./data/log/nginx:/var/log/nginx
   db:
     container_name: ds-mariadb
-    image: mariadb:10.9
+    image: mariadb:10.11
     restart: always
     ports:
       - 3306:3306
