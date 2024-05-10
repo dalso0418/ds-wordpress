@@ -2,8 +2,8 @@ version: '3.1'
 
 services:
   php:
-    container_name: ds-php8.2-fpm
-    image: dalso/ds-php8.2-fpm:latest
+    container_name: ds-php8.3-fpm
+    image: dalso/ds-php8.3-fpm:240509
     restart: always
     environment:
       - TZ=Asia/Seoul
@@ -14,8 +14,8 @@ services:
   web:
     depends_on:
       - php
-    container_name: ds-nginx-1.22
-    image: dalso/ds-nginx-1.22:latest
+    container_name: ds-nginx
+    image: dalso/ds-nginx:1.25.5-alpine
     restart: always
     environment:
       - TZ=Asia/Seoul
@@ -28,19 +28,16 @@ services:
       - ./data/log/nginx:/var/log/nginx
   db:
     container_name: ds-mariadb
-    image: mariadb:10.9
+    image: mysql:8.4
     restart: always
+    env_file: .env
     ports:
       - 3306:3306
     environment:
       - TZ=Asia/Seoul
-      - MARIADB_ROOT_PASSWORD=example
-      - MARIADB_USER=dalso
-      - MARIADB_PASSWORD=example
-      - MARIADB_DATABASE=wordpress
     volumes:
       - ./data/db:/var/lib/mysql
-      - ./config/db/my.cnf:/etc/mysql/my.cnf 
+      - ./config/db/my.cnf:/etc/my.cnf 
   redis:
     container_name: redis
     image: redis:alpine
